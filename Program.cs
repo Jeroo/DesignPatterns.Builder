@@ -6,9 +6,10 @@ namespace DesignPatterns.Builder
     {
         static void Main(string[] args)
         {
-            var sandwich = new Sandwich("Pan frica", "", "Carne", "Mayonesa", "Queso cheddar");
+            var sandwich = new SandwichAssembly(new CheeseBurger());
+            sandwich.Assemble();
 
-            Console.WriteLine($"{sandwich.Bread} {sandwich.Condiments} {sandwich.Protein} {sandwich.Veggies}");
+            Console.WriteLine($"{sandwich.GetSandwich.Bread} {sandwich.GetSandwich.Condiments} {sandwich.GetSandwich.Protein} {sandwich.GetSandwich.Veggies}");
             Console.ReadKey();
         }
     }
